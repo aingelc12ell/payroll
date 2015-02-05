@@ -41,30 +41,30 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">File<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> File <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">New</a></li>
-                <li><a href="#">Open</a></li>
+                <li><a href="#"> New </a></li>
+                <li><a href="#"> Open </a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Save</li>
-                <li><a href="#">Close</a></li>
+                <li><a href="#"> Save </a></li>
+                <li><a href="#"> Close </a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Edit<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Edit <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Settings</a></li>
+                <li><a href="#"> Settings </a></li>
                 <li><a href="#"></a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">View<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> View <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Reports</a></li>
+                <li><a href="#"> Reports </a></li>
               </ul>
             </li>
-            <li class="active"><a href="#about">About</a></li>
-            <li><a href="#help">Help</a></li>
+            <li class="active"><a href="#about"> About </a></li>
+            <li><a href="#help"> Help </a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
