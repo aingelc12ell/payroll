@@ -10,12 +10,12 @@
     <title>Payroll System Demo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
+    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -73,7 +73,7 @@
     <div class="container theme-showcase" role="main">
 	@yield('content')
     </div> <!-- /container -->
-	<script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<script src="{{ asset('js/jquery-1.11.2.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
   </body>
 </html>
