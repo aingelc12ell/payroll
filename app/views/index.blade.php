@@ -1,4 +1,4 @@
-@extends('themes.default.layouts.home')
+@extends('layouts.page')
 
 @section('content')
     this is from index.blade.php
