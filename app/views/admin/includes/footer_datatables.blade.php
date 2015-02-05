@@ -1,2 +1,0 @@
-<script src="{{ URL::to('/') }}/adminlte/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-<script src="{{ URL::to('/') }}/adminlte/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
