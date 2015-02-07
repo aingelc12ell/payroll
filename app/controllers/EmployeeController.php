@@ -31,7 +31,26 @@ class EmployeeController extends \BaseController {
 	 */
 	public function store()
 	{
-		return View::make('employee.store');
+			$v = Validator::make(Input::all(), [
+		        'txtFirstName' => 'required|max:255',
+		        'txtMiddleName' => 'max:255',
+				'txtLastName' => 'required|max:255'
+		    ]);
+
+		    if ($v->fails())
+		    {
+		        return Redirect::to('employee.create')->withErrors($v);
+		    }
+			else
+			{
+				$e =  new Employee;
+				$e.firstname = Input::post('txtFirstName');
+				$e.middlename = Input::post('txtMiddleName');
+				$e.firstname = Input::post('txtLastName');
+				$e.save();
+					
+				return View::make('employee.store');
+			}
 	}
 
 
