@@ -1,7 +1,7 @@
 @extends('layouts.page')
 
 @section('content')
-	<form>
+	{{ Form::open(array('route' => 'employees.store')) }}
 	  <div class="form-group">
 	    <label for="txtFirstName">First Name</label>
 	    <input type="text" class="form-control" id="txtFirstName" placeholder="Enter First Name">
