@@ -20,7 +20,7 @@ class EmployeeController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('employee.create');
 	}
 
 
@@ -31,7 +31,7 @@ class EmployeeController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		return View::make('employee.store');
 	}
 
 
@@ -43,7 +43,7 @@ class EmployeeController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return View::make('employee.show');
 	}
 
 
@@ -55,7 +55,7 @@ class EmployeeController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('employee.edit');
 	}
 
 
@@ -67,7 +67,7 @@ class EmployeeController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		return View::make('employee.update');
 	}
 
 
@@ -79,7 +79,7 @@ class EmployeeController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return View::make('employee.delete');
 	}
 
 
