@@ -27,7 +27,7 @@
 							 
 	    <label for="txtMiddleName">Middle Name</label>
 	    <input type="text" class="form-control" id="txtMiddleName" name="txtMiddleName" placeholder="Enter Middle Name"
-		@if($errors->has('middlename'))
+		@if($errors->has())
 			value="{{ Input::old('middlename') }}"
 		@endif
 		>
