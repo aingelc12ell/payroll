@@ -19,7 +19,6 @@
 				 @foreach($employees as $employee)
                  <tr>
                    <td>{{ $employee->firstname }}</td>
-                   <td>{{ $employee->middlename }}</td>
                    <td>{{ $employee->lastname }}</td>
                    <td> - </td>
                  </tr>
