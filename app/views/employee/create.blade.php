@@ -12,11 +12,7 @@
 						@endif
 		  	">
 	    <label for="txtFirstName">First Name</label>
-	    <input type="text" class="form-control" id="txtFirstName" name="firstname" placeholder="Enter First Name"
-		@if($errors->has('firstname'))
-			value="{{ Input::old('firstname') }}"
-		@endif
-		>
+		{{ Form::text('firstname', null, array('class'=>'form-control', 'placeholder' => 'Enter First Name')) }}
 		@if($errors->has('firstname'))
 			<span class="help-inline">{{ $errors->first('firstname') }}</span>
 		@endif
@@ -25,12 +21,9 @@
 		  						has-warning
 							 @endif">
 							 
-	    <label for="txtMiddleName">Middle Name</label>
-	    <input type="text" class="form-control" id="txtMiddleName" name="txtMiddleName" placeholder="Enter Middle Name"
-		@if($errors->has())
-			value="{{ Input::old('middlename') }}"
-		@endif
-		>
+	    <label for="txtMiddleName">Middle Name</label>	    
+		{{ Form::text('middlename', null, array('class'=>'form-control', 'placeholder' => 'Enter Middle Name')) }}
+		
 		@if($errors->has('middlename'))
 			<span class="help-inline">{{ $errors->first('middlename') }}</span>
 		@endif
@@ -39,11 +32,9 @@
 		  						has-warning
 							@endif">
 	    <label for="txtLastName">Last Name</label>
-	    <input type="text" class="form-control" id="txtLastName" name="txtLastName" placeholder="Enter Last Name"
-		@if($errors->has('lastname'))
-			value="{{ Input::old('lastname') }}"
-		@endif
-		>
+		
+		{{ Form::text('lastname', null, array('class'=>'form-control', 'placeholder' => 'Enter Last Name')) }}
+		
 		@if($errors->has('lastname'))
 			<span class="help-inline">{{ $errors->first('lastname') }}</span>
 		@endif
