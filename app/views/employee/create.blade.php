@@ -8,7 +8,7 @@
 	{{ Form::open(array('route' => 'employees.store')) }}
 	  <div class="form-group 
 	  					@if($errors->has('firstname'))
-		  					warning
+		  					has-warning
 						@endif
 		  	">
 	    <label for="txtFirstName">First Name</label>
@@ -17,14 +17,19 @@
 			<span class="help-inline">{{ $errors->first('firstname') }}</span>
 		@endif
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group @if($errors->has('middlename'))
+		  						has-warning
+							 @endif">
+							 
 	    <label for="txtMiddleName">Middle Name</label>
 	    <input type="text" class="form-control" id="txtMiddleName" name="txtMiddleName" placeholder="Enter Middle Name">
 		@if($errors->has('middlename'))
 			<span class="help-inline">{{ $errors->first('middlename') }}</span>
 		@endif
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group @if($errors->has('lastname'))
+		  						has-warning
+							@endif">
 	    <label for="txtLastName">Last Name</label>
 	    <input type="text" class="form-control" id="txtLastName" name="txtLastName" placeholder="Enter Last Name">
 		@if($errors->has('lastname'))
