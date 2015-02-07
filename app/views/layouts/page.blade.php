@@ -40,7 +40,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
+            <li class="dropdown
+			@if(Route::currentRouteName() == 'employees.create' || Route::currentRouteName() == 'employees.edit')
+				active
+			@endif
+			">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Employees <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{{ route('employees.create') }}"> Add New </a></li>
@@ -60,7 +64,6 @@
                 <li><a href="#"> Reports </a></li>
               </ul>
             </li>
-            <li class="active"><a href="#about"> About </a></li>
             <li><a href="#help"> Help </a></li>
           </ul>
         </div><!--/.nav-collapse -->
