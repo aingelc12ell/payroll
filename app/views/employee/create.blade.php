@@ -1,9 +1,19 @@
 @extends('layouts.page')
 
 @section('content')
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <h1>Payroll System Demo</h1>
-      <p>This is a demo application for Payroll System by Biler IT Solutions.</p>
-    </div>
+	<form>
+	  <div class="form-group">
+	    <label for="txtFirstName">First Name</label>
+	    <input type="text" class="form-control" id="txtFirstName" placeholder="Enter First Name">
+	  </div>
+	  <div class="form-group">
+	    <label for="txtMiddleName">Middle Name</label>
+	    <input type="text" class="form-control" id="txtMiddleName" placeholder="Enter Middle Name">
+	  </div>
+	  <div class="form-group">
+	    <label for="txtLastName">Last Name</label>
+	    <input type="text" class="form-control" id="txtLastName" placeholder="Enter Last Name">
+	  </div>
+	  <button type="submit" class="btn btn-default">Save</button>
+	</form>
 @stop
