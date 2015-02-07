@@ -46,7 +46,7 @@ class EmployeeController extends \BaseController {
 				$e =  new Employee;
 				$e->firstname = Input::get('txtFirstName');
 				$e->middlename = Input::get('txtMiddleName');
-				$e->firstname = Input::get('txtLastName');
+				$e->lastname = Input::get('txtLastName');
 				$e->save();
 					
 				return View::make('employee.store');
