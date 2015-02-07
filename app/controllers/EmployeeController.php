@@ -44,10 +44,10 @@ class EmployeeController extends \BaseController {
 			else
 			{
 				$e =  new Employee;
-				$e.firstname = Input::post('txtFirstName');
-				$e.middlename = Input::post('txtMiddleName');
-				$e.firstname = Input::post('txtLastName');
-				$e.save();
+				$e->firstname = Input::post('txtFirstName');
+				$e->middlename = Input::post('txtMiddleName');
+				$e->firstname = Input::post('txtLastName');
+				$e->save();
 					
 				return View::make('employee.store');
 			}
