@@ -16,24 +16,14 @@
                  </tr>
                </thead>
                <tbody>
+				 @foreach($employees as $employee)
                  <tr>
-                   <td>1</td>
-                   <td>Mark</td>
-                   <td>Otto</td>
-                   <td>@mdo</td>
+                   <td>{{ $employee->firstname }}</td>
+                   <td>{{ $employee->middlename }}</td>
+                   <td>{{ $employee->lastname }}</td>
+                   <td> - </td>
                  </tr>
-                 <tr>
-                   <td>2</td>
-                   <td>Jacob</td>
-                   <td>Thornton</td>
-                   <td>@fat</td>
-                 </tr>
-                 <tr>
-                   <td>3</td>
-                   <td>Larry</td>
-                   <td>the Bird</td>
-                   <td>@twitter</td>
-                 </tr>
+				 @endforeach
                </tbody>
              </table>
            </div>

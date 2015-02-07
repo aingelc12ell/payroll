@@ -9,7 +9,8 @@ class EmployeeController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('employee.index');
+		$employees = Employee::all();
+		return View::make('employee.index', $employees);
 	}
 
 
