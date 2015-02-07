@@ -10,7 +10,7 @@ class EmployeeController extends \BaseController {
 	public function index()
 	{
 		$employees = Employee::all();
-		return View::make('employee.index', compact($employees));
+		return View::make('employee.index', array('employees'=>$employees));
 	}
 
 
