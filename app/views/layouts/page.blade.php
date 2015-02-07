@@ -41,20 +41,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> File <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Employees <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li class="dropdown">
-					<a href="#"> New </a>
-					<ul class="dropdown-menu" role="menu">
-		            	<li class="dropdown">
-		              		<a href="{{ route('employees.create') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Employee <span class="caret"></span></a>  
-		            	</li>
-					</ul>
-				</li>
-                <li><a href="#"> Open </a></li>
-                <li class="divider"></li>
-                <li><a href="#"> Save </a></li>
-                <li><a href="#"> Close </a></li>
+                <li><a href="{{ route('employees.create') }}"> Add New </a></li>
+                <li><a href="{{ route('employees') }}"> View All </a></li>
               </ul>
             </li>
             <li class="dropdown">
