@@ -46,7 +46,7 @@
                 <li>
 					<a href="#"> New </a>
 		            <li class="dropdown">
-		              <a href="{{ route('employess.create') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Employee <span class="caret"></span></a>  
+		              <a href="{{ route('employees.create') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Employee <span class="caret"></span></a>  
 		            </li>
 				</li>
                 <li><a href="#"> Open </a></li>
