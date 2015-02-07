@@ -44,7 +44,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Employees <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{{ route('employees.create') }}"> Add New </a></li>
-                <li><a href="{{ route('employees') }}"> View All </a></li>
+                <li><a href="{{ route('employees.index') }}"> View All </a></li>
               </ul>
             </li>
             <li class="dropdown">
