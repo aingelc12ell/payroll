@@ -18,6 +18,7 @@
                <tbody>
 				 @foreach($employees as $employee)
                  <tr>
+				   <td>{{ $employee->employee_number }}</td>
                    <td>{{ $employee->firstname }}</td>
                    <td>{{ $employee->lastname }}</td>
                    <td> - </td>
