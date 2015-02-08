@@ -2,9 +2,15 @@
 
 @section('content')
 	@if($errors->has())
-		<div class="alert alert-warning" role="alert">Please check the form for errors</div>
+	  <div class="alert alert-warning" role="alert">
+	   <ul>
+	   @foreach ($errors->all() as $error)
+	      <li>{{ $error }}</li>
+	  @endforeach
+  	  </ul>
+  	  </div>
 	@endif
-	
+		
 	{{ Form::open(array('route' => 'employees.store')) }}
 	 
 	  <div class="form-group 
