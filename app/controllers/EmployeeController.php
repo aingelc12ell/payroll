@@ -48,7 +48,7 @@ class EmployeeController extends \BaseController {
 
 		    if ($v->fails())
 		    {
-		        return Redirect::to('employees/create?id='. Input::get('id') )->withErrors($v)->withInput(Input::get());
+		        return Redirect::to('employees/create')->withErrors($v)->withInput(Input::get());
 		    }
 			else
 			{
