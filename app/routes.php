@@ -18,3 +18,4 @@ Route::get('/', function()
 
 Route::resource('employees', 'EmployeeController');
 Route::resource('salary', 'SalaryController');
+Route::resource('employmentinfo', 'EmploymentInfoController');
