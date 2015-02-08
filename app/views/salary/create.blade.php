@@ -32,7 +32,7 @@
 		@endif
 	  </div>
 	  
-	  
+	  <div class="form-group">
 	  <div class="input-group 
 	  					@if($errors->has('firstname'))
 		  					has-warning
@@ -45,7 +45,9 @@
 		@endif
 		 <span class="input-group-addon">.00</span>
 	  </div>
+  	  </div>
 	  
+	  <div class="form-group">
 	  <div class="input-group @if($errors->has('de_minimis_total'))
 		  						has-warning
 							 @endif">
@@ -58,7 +60,10 @@
 		@endif
 		<span class="input-group-addon">.00</span>
 	  </div>
+  	  </div>
 	  
+	  
+	  <div class="form-group">
 	  <div class="input-group @if($errors->has('sss_contribution'))
 		  						has-warning
 							@endif">
@@ -70,7 +75,9 @@
 		@endif
 		<span class="input-group-addon">.00</span>
 	  </div>
+  	  </div>
 	  
+	  <div class="form-group">
 	  <div class="input-group @if($errors->has('philhealth'))
 		  						has-warning
 							@endif">
@@ -82,8 +89,10 @@
 		@endif
 		<span class="input-group-addon">.00</span>
 	  </div>
+  	  </div>
 	  
 	  
+	  <div class="form-group">
 	  <div class="input-group @if($errors->has('pagibig'))
 		  						has-warning
 							@endif">
@@ -95,6 +104,7 @@
 		@endif
 		<span class="input-group-addon">.00</span>
 	  </div>
+      </div>
 	  <button type="submit" class="btn btn-default">Save</button>
 	</form>
 @stop
