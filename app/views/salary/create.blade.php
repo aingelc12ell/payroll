@@ -33,16 +33,17 @@
 	  </div>
 	  
 	  
-	  <div class="form-group 
+	  <div class="input-group 
 	  					@if($errors->has('firstname'))
 		  					has-warning
 						@endif
 		  	">
-	    <label for="txtFirstName">Basic Salary</label>
+		<span class="input-group-addon">PHP</span>
 		{{ Form::text('basic', null, array('class'=>'form-control', 'placeholder' => 'Basic Salary')) }}
 		@if($errors->has('basic'))
 			<span class="help-inline">{{ $errors->first('basic') }}</span>
 		@endif
+		 <span class="input-group-addon">.00</span>
 	  </div>
 	  
 	  <div class="form-group @if($errors->has('de_minimis_total'))
