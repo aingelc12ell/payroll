@@ -6,16 +6,29 @@
 	@endif
 	
 	{{ Form::open(array('route' => 'salary.store')) }}
-	 
-	  <div class="form-group 
-	  					@if($errors->has('employee_number'))
+	
+  <div class="form-group @if($errors->has('taxstatus'))
+	  						has-warning
+						@endif">
+    <label for="civilstatus">Tax Status</label>
+	{{ Form::select('taxstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow'),
+		null, array('class'=> 'form-control')) }}
+	
+	@if($errors->has('taxstatus'))
+		<span class="help-inline">{{ $errors->first('taxstatus') }}</span>
+	@endif
+  </div>
+  
+   
+   <div class="form-group 
+	  					@if($errors->has('is_minimum_wage'))
 		  					has-warning
 						@endif
 		  	">
-	    <label for="employee_number">Employee Number</label>
-		{{ Form::text('employee_number', null, array('class'=>'form-control', 'placeholder' => 'Enter Employee Number')) }}
-		@if($errors->has('employee_number'))
-			<span class="help-inline">{{ $errors->first('employee_number') }}</span>
+	    <label for="employee_number">Minimum Wage</label>
+		{{ Form::text('is_minimum_wage', null, array('class'=>'form-control', 'placeholder' => 'is a Minimum wage earner?')) }}
+		@if($errors->has('is_minimum_Wage'))
+			<span class="help-inline">{{ $errors->first('is_minimum_wage') }}</span>
 		@endif
 	  </div>
 	  
@@ -25,123 +38,59 @@
 		  					has-warning
 						@endif
 		  	">
-	    <label for="txtFirstName">First Name</label>
-		{{ Form::text('firstname', null, array('class'=>'form-control', 'placeholder' => 'Enter First Name')) }}
-		@if($errors->has('firstname'))
-			<span class="help-inline">{{ $errors->first('firstname') }}</span>
+	    <label for="txtFirstName">Basic Salary</label>
+		{{ Form::text('basic', null, array('class'=>'form-control', 'placeholder' => 'Basic Salary')) }}
+		@if($errors->has('basic'))
+			<span class="help-inline">{{ $errors->first('basic') }}</span>
 		@endif
 	  </div>
 	  
-	  <div class="form-group @if($errors->has('middlename'))
+	  <div class="form-group @if($errors->has('de_minimis_total'))
 		  						has-warning
 							 @endif">
 							 
-	    <label for="txtMiddleName">Middle Name</label>	    
-		{{ Form::text('middlename', null, array('class'=>'form-control', 'placeholder' => 'Enter Middle Name')) }}
+	    <label for="txtMiddleName">De Minimis Total</label>	    
+		{{ Form::text('de_minimis_total', null, array('class'=>'form-control', 'placeholder' => 'De Minimis Total')) }}
 		
-		@if($errors->has('middlename'))
-			<span class="help-inline">{{ $errors->first('middlename') }}</span>
-		@endif
-	  </div>
-	  <div class="form-group @if($errors->has('lastname'))
-		  						has-warning
-							@endif">
-	    <label for="txtLastName">Last Name</label>
-		
-		{{ Form::text('lastname', null, array('class'=>'form-control', 'placeholder' => 'Enter Last Name')) }}
-		
-		@if($errors->has('lastname'))
-			<span class="help-inline">{{ $errors->first('lastname') }}</span>
+		@if($errors->has('de_minimis_total'))
+			<span class="help-inline">{{ $errors->first('de_minimis_total') }}</span>
 		@endif
 	  </div>
 	  
-	  <div class="form-group">
-	  	<label for="gender">Gender</label>&nbsp;&nbsp;&nbsp;
-		{{ Form::radio('gender', 'male') }} Male
-		{{ Form::radio('gender', 'female') }} Female
-	  </div>
-	  
-	  <div class="form-group @if($errors->has('birthdate'))
+	  <div class="form-group @if($errors->has('sss_contribution'))
 		  						has-warning
 							@endif">
-	    <label for="birthdate">Birth Date</label>
+	    <label for="txtLastName">SSS Contribution</label>
 		
-		{{ Form::text('birthdate', null, array('class'=>'form-control', 'placeholder' => 'Enter Birth Date')) }}
+		{{ Form::text('sss', null, array('class'=>'form-control', 'placeholder' => 'SSS Contribution')) }}
 		
-		@if($errors->has('birthdate'))
-			<span class="help-inline">{{ $errors->first('birthdate') }}</span>
+		@if($errors->has('sss'))
+			<span class="help-inline">{{ $errors->first('sss') }}</span>
 		@endif
 	  </div>
 	  
-	  <div class="form-group @if($errors->has('civilstatus'))
+	  <div class="form-group @if($errors->has('philhealth'))
 		  						has-warning
 							@endif">
-	    <label for="civilstatus">Civil Status</label>
-		{{ Form::select('civilstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow'),
-			null, array('class'=> 'form-control')) }}
+	    <label for="birthdate">PhilHealth</label>
 		
-		@if($errors->has('civilstatus'))
-			<span class="help-inline">{{ $errors->first('civilstatus') }}</span>
+		{{ Form::text('philhealth', null, array('class'=>'form-control', 'placeholder' => 'Enter PhilHealth')) }}
+		
+		@if($errors->has('philhealth'))
+			<span class="help-inline">{{ $errors->first('philhealth') }}</span>
 		@endif
 	  </div>
 	  
-	  <div class="form-group @if($errors->has('phone'))
-		  						has-warning
-							@endif">
-	    <label for="birthdate">Phone</label>
-		
-		{{ Form::text('phone', null, array('class'=>'form-control', 'placeholder' => 'Enter Phone')) }}
-		
-		@if($errors->has('phone'))
-			<span class="help-inline">{{ $errors->first('phone') }}</span>
-		@endif
-	  </div>
 	  
-	  <div class="form-group @if($errors->has('Address'))
+	  <div class="form-group @if($errors->has('pagibig'))
 		  						has-warning
 							@endif">
-	    <label for="address">Address</label>
+	    <label for="birthdate">Pag-ibig Contribution</label>
 		
-		{{ Form::text('address', null, array('class'=>'form-control', 'placeholder' => 'Enter Address')) }}
+		{{ Form::text('pagibig', null, array('class'=>'form-control', 'placeholder' => 'Pagibig Contribution')) }}
 		
-		@if($errors->has('address'))
-			<span class="help-inline">{{ $errors->first('address') }}</span>
-		@endif
-	  </div>
-	  
-	  <div class="form-group @if($errors->has('zip'))
-		  						has-warning
-							@endif">
-	    <label for="birthdate">Zip</label>
-		
-		{{ Form::text('zip', null, array('class'=>'form-control', 'placeholder' => 'Enter Zip')) }}
-		
-		@if($errors->has('zip'))
-			<span class="help-inline">{{ $errors->first('zip') }}</span>
-		@endif
-	  </div>
-	  
-	  <div class="form-group @if($errors->has('email'))
-		  						has-warning
-							@endif">
-	    <label for="birthdate">email</label>
-		
-		{{ Form::text('email', null, array('class'=>'form-control', 'placeholder' => 'Enter Email')) }}
-		
-		@if($errors->has('email'))
-			<span class="help-inline">{{ $errors->first('email') }}</span>
-		@endif
-	  </div>
-	  
-	  <div class="form-group @if($errors->has('phone'))
-		  						has-warning
-							@endif">
-	    <label for="birthdate">Phone</label>
-		
-		{{ Form::text('phone', null, array('class'=>'form-control', 'placeholder' => 'Enter Phone')) }}
-		
-		@if($errors->has('phone'))
-			<span class="help-inline">{{ $errors->first('phone') }}</span>
+		@if($errors->has('pagibig'))
+			<span class="help-inline">{{ $errors->first('pagibig') }}</span>
 		@endif
 	  </div>
 	  <button type="submit" class="btn btn-default">Save</button>
