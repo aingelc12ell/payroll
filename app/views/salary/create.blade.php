@@ -6,7 +6,7 @@
 	@endif
 	
 	{{ Form::open(array('route' => 'salary.store')) }}
-	
+	<input type="hidden" name="employee_id" value="{{ $id }}">
   <div class="form-group @if($errors->has('taxstatus'))
 	  						has-warning
 						@endif">

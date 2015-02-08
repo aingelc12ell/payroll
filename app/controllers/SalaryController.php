@@ -21,7 +21,7 @@ class SalaryController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('salary.create');
+		return View::make('salary.create', array('id'=> Input::get('id')));
 	}
 
 

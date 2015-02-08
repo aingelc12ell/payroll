@@ -67,7 +67,7 @@ class EmployeeController extends \BaseController {
 				
 				$e->save();
 					
-				return View::make('employee.store');
+				return View::make('employee.store', 'id'=> $e->id);
 			}
 	}
 
