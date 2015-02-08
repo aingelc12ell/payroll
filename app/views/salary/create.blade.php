@@ -74,10 +74,10 @@
 		  						has-warning
 							@endif">
 	    <span class="input-group-addon">SSS Contribution</span>
-		{{ Form::text('sss', null, array('class'=>'form-control', 'placeholder' => 'SSS Contribution')) }}
+		{{ Form::text('sss_contribution', null, array('class'=>'form-control', 'placeholder' => 'SSS Contribution')) }}
 		
-		@if($errors->has('sss'))
-			<span class="help-inline">{{ $errors->first('sss') }}</span>
+		@if($errors->has('sss_contribution'))
+			<span class="help-inline">{{ $errors->first('sss_contribution') }}</span>
 		@endif
 		<span class="input-group-addon">.00</span>
 	  </div>
@@ -88,10 +88,10 @@
 		  						has-warning
 							@endif">
 		<span class="input-group-addon">Philhealth Contribution</span>
-		{{ Form::text('philhealth', null, array('class'=>'form-control', 'placeholder' => 'Enter PhilHealth')) }}
+		{{ Form::text('philhealth_contribution', null, array('class'=>'form-control', 'placeholder' => 'Enter PhilHealth')) }}
 		
-		@if($errors->has('philhealth'))
-			<span class="help-inline">{{ $errors->first('philhealth') }}</span>
+		@if($errors->has('philhealth_contribution'))
+			<span class="help-inline">{{ $errors->first('philhealth_contribution') }}</span>
 		@endif
 		<span class="input-group-addon">.00</span>
 	  </div>

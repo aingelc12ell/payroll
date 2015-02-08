@@ -34,7 +34,7 @@ class SalaryController extends \BaseController {
 	{
 		$v = Validator::make(Input::all(), [
 	        'tax_status' => 'required|max:255',
-	        'minimum_wage' => 'max:255',
+	        'is_minimum_wage' => 'max:255',
 			'basic_salary' => 'required|max:255',
 			'de_minimis_total' => 'max:255',
 			'sss_contribution' => 'max:255',
@@ -45,7 +45,7 @@ class SalaryController extends \BaseController {
 
 	    if ($v->fails())
 	    {
-	        return Redirect::to('salary/create')->withErrors($v)->withInput(Input::get());
+	        return Redirect::to('salary/create?id=' . Input::get('employee_id'))->withErrors($v)->withInput(Input::get());
 	    }
 		else
 		{
