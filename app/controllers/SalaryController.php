@@ -9,7 +9,8 @@ class SalaryController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$employees = Employee::all();
+		return View::make('employee.index', array('employees'=>$employees));
 	}
 
 
@@ -20,7 +21,7 @@ class SalaryController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('employee.create');
 	}
 
 
@@ -31,7 +32,36 @@ class SalaryController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$v = Validator::make(Input::all(), [
+	        'tax_status' => 'required|max:255',
+	        'minimum_wage' => 'max:255',
+			'basic_salary' => 'required|max:255',
+			'de_minimis_total' => 'max:255',
+			'sss_contribution' => 'max:255',
+			'philhealth_contribution' => 'max:255',
+			'pagibig_contribution' => 'max:255',
+			'employee_id' => 'required'
+		    ]);
+
+	    if ($v->fails())
+	    {
+	        return Redirect::to('salary/create')->withErrors($v)->withInput(Input::get());
+	    }
+		else
+		{
+			$e =  new Salary;
+			$e->tax_status = Input::get('tax_status');
+			$e->minimum_wage = Input::get('minimum_wage');
+			$e->basic_salary = Input::get('basic_salary');
+			$e->de_minimis_total = Input::get('de_minimis_total');
+			$e->sss_contribution = Input::get('sss_contribution');
+			$e->philhealth_contribution = Input::get('philhealth_contribution');
+			$e->employee_id = Input::get('employee_id');
+			
+			$e->save();
+				
+			return View::make('salary.store');
+		}
 	}
 
 

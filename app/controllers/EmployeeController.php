@@ -33,6 +33,7 @@ class EmployeeController extends \BaseController {
 	public function store()
 	{
 			$v = Validator::make(Input::all(), [
+				'employee_number' => 'required|max:255',
 		        'firstname' => 'required|max:255',
 		        'middlename' => 'max:255',
 				'lastname' => 'required|max:255',
@@ -52,6 +53,7 @@ class EmployeeController extends \BaseController {
 			else
 			{
 				$e =  new Employee;
+				$e->employee_number = Input::get('employee_number');
 				$e->firstname = Input::get('firstname');
 				$e->middlename = Input::get('middlename');
 				$e->lastname = Input::get('lastname');
