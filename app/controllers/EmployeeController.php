@@ -33,7 +33,7 @@ class EmployeeController extends \BaseController {
 	public function store()
 	{
 			$v = Validator::make(Input::all(), [
-				'employee_number' => 'required|max:255',
+				'employee_id' => 'required|max:255',
 		        'firstname' => 'required|max:255',
 		        'middlename' => 'max:255',
 				'lastname' => 'required|max:255',
@@ -48,7 +48,7 @@ class EmployeeController extends \BaseController {
 
 		    if ($v->fails())
 		    {
-		        return Redirect::to('employees/create')->withErrors($v)->withInput(Input::get());
+		        return Redirect::to('employees/create?id='. Input::get('id') )->withErrors($v)->withInput(Input::get());
 		    }
 			else
 			{
