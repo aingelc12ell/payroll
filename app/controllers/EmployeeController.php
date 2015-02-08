@@ -35,7 +35,14 @@ class EmployeeController extends \BaseController {
 			$v = Validator::make(Input::all(), [
 		        'firstname' => 'required|max:255',
 		        'middlename' => 'max:255',
-				'lastname' => 'required|max:255'
+				'lastname' => 'required|max:255',
+				'gender' => 'max:255',
+				'birthdate' => 'max:255',
+				'civilstatus' => 'max:255',
+				'phone' => 'max:255',
+				'address' => 'max:255',
+				'zip' => 'max:255',
+				'email' => 'max:255'
 		    ]);
 
 		    if ($v->fails())
@@ -48,6 +55,14 @@ class EmployeeController extends \BaseController {
 				$e->firstname = Input::get('firstname');
 				$e->middlename = Input::get('middlename');
 				$e->lastname = Input::get('lastname');
+				$e->gender = Input::get('gender');
+				$e->birthdate = Input::get('birthdate');
+				$e->civilstatus = Input::get('civilstatus');
+				$e->phone = Input::get('phone');
+				$e->address = Input::get('address');
+				$e->zip = Input::get('zip');
+				$e->email = Input::get('email');
+				
 				$e->save();
 					
 				return View::make('employee.store');
