@@ -38,7 +38,7 @@
 		  					has-warning
 						@endif
 		  	">
-		<span class="input-group-addon">PHP</span>
+		<span class="input-group-addon">Basic Salary</span>
 		{{ Form::text('basic', null, array('class'=>'form-control', 'placeholder' => 'Basic Salary')) }}
 		@if($errors->has('basic'))
 			<span class="help-inline">{{ $errors->first('basic') }}</span>
@@ -46,53 +46,54 @@
 		 <span class="input-group-addon">.00</span>
 	  </div>
 	  
-	  <div class="form-group @if($errors->has('de_minimis_total'))
+	  <div class="input-group @if($errors->has('de_minimis_total'))
 		  						has-warning
 							 @endif">
 							 
-	    <label for="txtMiddleName">De Minimis Total</label>	    
+	    <span class="input-group-addon">De Minimis Total</span>	    
 		{{ Form::text('de_minimis_total', null, array('class'=>'form-control', 'placeholder' => 'De Minimis Total')) }}
 		
 		@if($errors->has('de_minimis_total'))
 			<span class="help-inline">{{ $errors->first('de_minimis_total') }}</span>
 		@endif
+		<span class="input-group-addon">.00</span>
 	  </div>
 	  
-	  <div class="form-group @if($errors->has('sss_contribution'))
+	  <div class="input-group @if($errors->has('sss_contribution'))
 		  						has-warning
 							@endif">
-	    <label for="txtLastName">SSS Contribution</label>
-		
+	    <span class="input-group-addon">SSS Contribution</span>
 		{{ Form::text('sss', null, array('class'=>'form-control', 'placeholder' => 'SSS Contribution')) }}
 		
 		@if($errors->has('sss'))
 			<span class="help-inline">{{ $errors->first('sss') }}</span>
 		@endif
+		<span class="input-group-addon">.00</span>
 	  </div>
 	  
-	  <div class="form-group @if($errors->has('philhealth'))
+	  <div class="input-group @if($errors->has('philhealth'))
 		  						has-warning
 							@endif">
-	    <label for="birthdate">PhilHealth</label>
-		
+		<span class="input-group-addon">Philhealth Contribution</span>
 		{{ Form::text('philhealth', null, array('class'=>'form-control', 'placeholder' => 'Enter PhilHealth')) }}
 		
 		@if($errors->has('philhealth'))
 			<span class="help-inline">{{ $errors->first('philhealth') }}</span>
 		@endif
+		<span class="input-group-addon">.00</span>
 	  </div>
 	  
 	  
-	  <div class="form-group @if($errors->has('pagibig'))
+	  <div class="input-group @if($errors->has('pagibig'))
 		  						has-warning
 							@endif">
-	    <label for="birthdate">Pag-ibig Contribution</label>
-		
+	    <span class="input-group-addon">Pag-ibig Contribution</span>	
 		{{ Form::text('pagibig', null, array('class'=>'form-control', 'placeholder' => 'Pagibig Contribution')) }}
 		
 		@if($errors->has('pagibig'))
 			<span class="help-inline">{{ $errors->first('pagibig') }}</span>
 		@endif
+		<span class="input-group-addon">.00</span>
 	  </div>
 	  <button type="submit" class="btn btn-default">Save</button>
 	</form>
