@@ -9,8 +9,8 @@ class SalaryController extends \BaseController {
 	 */
 	public function index()
 	{
-		$employees = Employee::all();
-		return View::make('employee.index', array('employees'=>$employees));
+		$salaries = Salary::all();
+		return View::make('salary.index', array('salaries'=>$salaries));
 	}
 
 
@@ -21,7 +21,7 @@ class SalaryController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('employee.create');
+		return View::make('salary.create');
 	}
 
 
