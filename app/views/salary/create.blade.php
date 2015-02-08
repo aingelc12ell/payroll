@@ -13,15 +13,15 @@
 	
 	{{ Form::open(array('route' => 'salary.store')) }}
 	<input type="hidden" name="employee_id" value="{{ $id }}">
-  <div class="form-group @if($errors->has('taxstatus'))
+  <div class="form-group @if($errors->has('tax_status'))
 	  						has-warning
 						@endif">
     <label for="civilstatus">Tax Status</label>
-	{{ Form::select('taxstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow'),
+	{{ Form::select('tax_status', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow'),
 		null, array('class'=> 'form-control')) }}
 	
-	@if($errors->has('taxstatus'))
-		<span class="help-inline">{{ $errors->first('taxstatus') }}</span>
+	@if($errors->has('tax_status'))
+		<span class="help-inline">{{ $errors->first('tax_status') }}</span>
 	@endif
   </div>
   
@@ -45,9 +45,9 @@
 						@endif
 		  	">
 		<span class="input-group-addon">Basic Salary</span>
-		{{ Form::text('basic', null, array('class'=>'form-control', 'placeholder' => 'Basic Salary')) }}
-		@if($errors->has('basic'))
-			<span class="help-inline">{{ $errors->first('basic') }}</span>
+		{{ Form::text('basic_salary', null, array('class'=>'form-control', 'placeholder' => 'Basic Salary')) }}
+		@if($errors->has('basic_salary'))
+			<span class="help-inline">{{ $errors->first('basic_salary') }}</span>
 		@endif
 		 <span class="input-group-addon">.00</span>
 	  </div>
