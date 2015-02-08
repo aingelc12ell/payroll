@@ -56,8 +56,8 @@
 	  </div>
 	  
 	  <div class="radio">
-	  	<label for="Gender"></label>
-		{{ Form::radio('gender', 'male') }} Male <br/>
+	  	<label for="Gender">Gender</label>
+		{{ Form::radio('gender', 'male') }} Male
 		{{ Form::radio('gender', 'female') }} Female
 	  </div>
 	  
@@ -70,6 +70,17 @@
 		
 		@if($errors->has('birthdate'))
 			<span class="help-inline">{{ $errors->first('birthdate') }}</span>
+		@endif
+	  </div>
+	  
+	  <div class="form-group @if($errors->has('civilstatus'))
+		  						has-warning
+							@endif">
+	    <label for="civilstatus">Civil Status</label>
+		{{ Form::select('civilstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow')) }}
+		
+		@if($errors->has('civilstatus'))
+			<span class="help-inline">{{ $errors->first('civilstatus') }}</span>
 		@endif
 	  </div>
 	  
