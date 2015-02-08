@@ -51,7 +51,7 @@ class SalaryController extends \BaseController {
 		{
 			$e =  new Salary;
 			$e->tax_status = Input::get('tax_status');
-			$e->minimum_wage = Input::get('minimum_wage');
+			$e->is_minimum_wage = Input::get('is_minimum_wage');
 			$e->basic_salary = Input::get('basic_salary');
 			$e->de_minimis_total = Input::get('de_minimis_total');
 			$e->sss_contribution = Input::get('sss_contribution');
