@@ -55,8 +55,8 @@
 		@endif
 	  </div>
 	  
-	  <div class="radio">
-	  	<label for="Gender">Gender</label>
+	  <div class="form-group">
+	  	<label for="gender">Gender</label>&nbsp;&nbsp;&nbsp;
 		{{ Form::radio('gender', 'male') }} Male
 		{{ Form::radio('gender', 'female') }} Female
 	  </div>
@@ -77,7 +77,8 @@
 		  						has-warning
 							@endif">
 	    <label for="civilstatus">Civil Status</label>
-		{{ Form::select('civilstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow')) }}
+		{{ Form::select('civilstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow'),
+			 array('class'=> 'form-control')) }}
 		
 		@if($errors->has('civilstatus'))
 			<span class="help-inline">{{ $errors->first('civilstatus') }}</span>
