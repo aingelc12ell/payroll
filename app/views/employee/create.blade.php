@@ -78,7 +78,7 @@
 							@endif">
 	    <label for="civilstatus">Civil Status</label>
 		{{ Form::select('civilstatus', array('single' => 'Single', 'Married' => 'Married', 'widow' => 'Widow'),
-			 array('class'=> 'form-control')) }}
+			null, array('class'=> 'form-control')) }}
 		
 		@if($errors->has('civilstatus'))
 			<span class="help-inline">{{ $errors->first('civilstatus') }}</span>
