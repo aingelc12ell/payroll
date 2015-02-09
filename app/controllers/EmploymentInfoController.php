@@ -21,7 +21,7 @@ class EmploymentInfoController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('employmentinfos.create', array('id'=> Input::get('id')));
+		return View::make('employmentinfo.create', array('id'=> Input::get('id')));
 	}
 
 

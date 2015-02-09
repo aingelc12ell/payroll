@@ -1,12 +1,11 @@
 {
-	"name": "biler/dar",
-	"description": "Blogging Software using MongoDB and Laravel.",
-	"keywords": ["framework", "laravel"],
+	"name": "biler/payroll",
+	"description": "An open-source payroll software, specially crafted fro Philippines-based companies.",
+	"keywords": ["framework", "laravel", "payroll", "accounting", "philippines", "manpower", "human resource"],
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		 "jenssegers/mongodb": "2.*",
-		 "cviebrock/eloquent-sluggable": "2.*"
+		 "jenssegers/mongodb": "2.*"
 	},
 	"autoload": {
 		"classmap": [

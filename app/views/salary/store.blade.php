@@ -2,7 +2,7 @@
 
 @section('content')
    <div class="alert alert-success" role="alert">
-	   Employee Successfully Added!<br/>
-	  {{ link_to('employees/create', 'Add Another') }}
+	   Salary Information Successfully Added!<br/>
+	  {{ link_to('employmentinfo/create', 'Set Employment Details') }}
    </div>
 @stop
