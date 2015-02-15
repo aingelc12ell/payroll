@@ -16,7 +16,8 @@ An open-source payroll software,  specially crafted fro Philippines-based compan
 
 1. create the project by executing this command
 
-   composer create-project biler/payroll yourdomain.com
+
+    composer create-project biler/payroll yourdomain.com
 
 2. edit payroll.dev to reflect the actual path to your yourdomain.com/public folder
 
@@ -33,17 +34,30 @@ An open-source payroll software,  specially crafted fro Philippines-based compan
 
 1. configure vhost in nginx. a payroll.dev file is provided with this package. simple copy it by:
 
+
     sudo cp payroll.dev /etc/nginx/sites-available/yourdomain.com
 
-2. Add it in the enabled sites 
+2. Add it in the enabled sites
+
+
     sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/yourdomain.com
 
 3. restart nginx
 
-   sudo nginx -s reload
+
+    sudo nginx -s reload
 
 if the nginx returns back an error, try deleting the default nginx site
 
-   sudo rm /etc/nginx/sites-enabled/default
+    sudo rm /etc/nginx/sites-enabled/default
 
 4. restart again nginx
+
+5. If running in localhost,or dev version, make sure to set it so you can visit the site like:
+
+
+      sudo nano /private/etc/hosts
+
+add new line
+
+       127.0.0.1 payroll.dev
